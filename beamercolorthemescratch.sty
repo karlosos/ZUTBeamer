@@ -1,0 +1,73 @@
+\mode<presentation>
+
+% Global variables
+\def\city#1{\gdef\@city{#1}}
+\def\supervisor#1{\gdef\@supervisor{#1}}
+\def\goal#1{\gdef\@goal{#1}}
+
+% Font sizes
+\setbeamerfont{author}{size=\Large, series=\bfseries}
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{supervisor}{size=\footnotesize}
+\setbeamerfont{goal}{size=\footnotesize}
+
+
+% Define color scheme
+\definecolor{ScratchBrown}{RGB}{119,95,85}
+\definecolor{ScratchLightBrown}{RGB}{235,221,195}
+\definecolor{ScratchLightBlue}{RGB}{148,182,210}
+\definecolor{ScratchOrange}{RGB}{221,128,71}
+\definecolor{ScratchLightOrange}{RGB}{216,178,92}
+\definecolor{ScratchUltraLightOrange}{RGB}{245,236,215}
+\definecolor{ScratchRed}{RGB}{153, 13, 6}
+\definecolor{ScratchGray}{RGB}{50, 50, 50}
+
+\definecolor{DarkBlue}{RGB}{28, 47, 150}
+\definecolor{Grey}{RGB}{153, 153, 153}
+
+% Syntax highlighting colors
+\definecolor{CodeRed}{RGB}{215, 58, 71}
+\definecolor{CodeGreen}{RGB}{34, 134, 58}
+\definecolor{CodeOrange}{RGB}{227, 98, 9}
+
+% Set color theme
+\setbeamercolor*{title page header}{fg=white}
+\setbeamercolor*{title}{fg=ScratchLightBrown}
+\setbeamercolor*{author}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{item}{fg=ScratchOrange}
+\setbeamercolor*{frametitle}{fg=ScratchBrown}
+\setbeamercolor*{block title}{fg=white, bg=ScratchOrange}
+\setbeamercolor*{block title example}{fg=white, bg=ScratchLightOrange}
+\setbeamercolor*{block title alerted}{fg=white, bg=ScratchRed}
+\setbeamercolor*{block body}{bg=ScratchUltraLightOrange}
+\setbeamercolor*{block body example}{bg=ScratchUltraLightOrange}
+\setbeamercolor*{block body alerted}{bg=ScratchUltraLightOrange}
+\setbeamercolor*{section in toc}{fg=black}
+\setbeamercolor*{section page}{fg=white}
+\setbeamercolor*{caption}{fg=ScratchGray}
+\setbeamercolor*{caption name}{fg=ScratchOrange}
+\setbeamercolor*{qed symbol}{fg=ScratchOrange}
+\setbeamercolor*{alerted text}{fg=ScratchRed}
+\setbeamercolor*{bibliography entry author}{fg=black}
+
+% Syntax highlight colors
+\lstset{%
+    basicstyle=\ttfamily,
+    commentstyle=\color{CodeGreen},
+    keywordstyle=\color{CodeRed},
+    stringstyle=\color{CodeOrange}
+}
+
+% Links colors
+\hypersetup{
+  colorlinks = true,
+  linkcolor = ScratchOrange
+}
+
+% Color brackets in references
+\let\oldcite=\cite                                                              
+\renewcommand{\cite}[1]{\textcolor{ScratchOrange}{\oldcite{#1}}}
+
+\mode <all>

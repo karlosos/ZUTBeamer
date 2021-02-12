@@ -1,0 +1,98 @@
+\RequirePackage{tikz, datetime, textpos}
+
+\mode<presentation>
+
+% Backgrounds
+\setbeamertemplate{background}{
+    \begin{tikzpicture}
+        \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+        \fill[color=DarkBlue] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
+        %\fill[color=ScratchOrange] (0.1,0.1) rectangle(2.95,1.9);
+        \fill[color=Grey] (2.8,0) rectangle(\the\paperwidth,0.5);
+        \ifnum\thepage>1\relax%
+            \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+        \fi
+    \end{tikzpicture}
+}
+
+% Title page
+\setbeamertemplate{title page}{
+    \setcounter{framenumber}{0}
+	\begin{textblock*}{7cm}(90pt, -90pt)
+		\begin{beamercolorbox}[wd=9.25cm, center]{title page header}
+		  \usebeamerfont{title}\usebeamercolor{title}\inserttitle%
+		\end{beamercolorbox}%
+		\vspace{2em}
+		\begin{beamercolorbox}[wd=9.25cm, center]{author}
+		  \usebeamerfont{institute}\insertinstitute%
+		\end{beamercolorbox}
+		\vspace{2em}
+		\begin{beamercolorbox}[wd=9.25cm, center]{author}
+		  \usebeamerfont{author}\insertauthor%
+		\end{beamercolorbox}
+		\vspace{0.5em}
+		\begin{beamercolorbox}[wd=9.25cm, center]{author}
+		  \usebeamerfont{supervisor}Promotor: \@supervisor%
+		\end{beamercolorbox}
+		\vspace{2em}
+		\begin{beamercolorbox}[wd=9.25cm]{author}
+		  \usebeamerfont{goal}Cel pracy: \@goal%
+		\end{beamercolorbox}
+    \end{textblock*}
+    \begin{textblock*}{9cm}(2cm, 5.625cm)
+		\begin{beamercolorbox}{date}
+	      \usebeamerfont{date}\textbf{\@city}, \insertdate%
+	    \end{beamercolorbox}
+    \end{textblock*}
+	% Green ZUT logo
+	\begin{tikzpicture}[overlay,remember picture]
+		\node[xshift=1.4cm,yshift=-20pt]
+        at (current page.north west) {
+        \includegraphics[width=2.5cm]{resources/zut_logo.png}
+        };
+    \end{tikzpicture}%
+	% Blue WIZUT logo
+	\begin{tikzpicture}[overlay,remember picture]
+		\node[xshift=1.4cm,yshift=20pt]
+        at (current page.south west) {
+        \includegraphics[width=2.5cm]{resources/wi_logo.png}
+        };
+    \end{tikzpicture}%
+	
+}
+
+% Bullets as squares
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[square]
+% \setbeamertemplate{itemize item}{\tikz{\draw[color=ScratchBrown, semithick] rectangle(.2,.2);}}
+% \setbeamertemplate{itemize subitem}{\tikz{\draw[color=ScratchOrange, ultra thick] rectangle(.2,.2);}}
+% \setbeamertemplate{itemize subsubitem}{\tikz{\draw[color=ScratchLightOrange] rectangle(.2,.2);}}
+
+\defbeamertemplate*{itemize item}{ScratchBrown}{$\bullet$}
+\defbeamertemplate*{itemize subitem}{ScratchBrown}{\---}
+\defbeamertemplate*{itemize subsubitem}{ScratchBrown}{\guillemotright}
+
+\setbeamertemplate{enumerate items}[default]
+
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\setbeamertemplate{bibliography item}[text]
+
+% Footer
+\defbeamertemplate*{footline}{fibeamer}{%
+    \ifnum\c@framenumber=0\else%
+      \begin{tikzpicture}[overlay]
+        \node[anchor=south east,
+          yshift=0.1cm,
+          xshift=-0.1cm] at
+          (current page.south east) {
+            \usebeamercolor[fg]{framenumber}%
+            \usebeamerfont{framenumber}%
+            \insertframenumber/\inserttotalframenumber};
+      \end{tikzpicture}
+    \fi}
+
+\mode<all>

@@ -1,0 +1,40 @@
+\mode<presentation>
+
+% Subtitle cursive
+\setbeamerfont{framesubtitle}{size=\small, shape=\itshape}
+
+% Frame title
+\defbeamertemplate*{frametitle}{texsx}[1][]
+{
+\vskip0.5cm%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle} 
+    \begin{tikzpicture}
+    \useasboundingbox[fill=white](0,0.0) rectangle(\the\paperwidth,1.2);
+    \fill[ScratchOrange] (0.1,0.0) rectangle(2.95,1.2);
+    \fill[ScratchLightBlue] (3.05,0) rectangle(\the\paperwidth-3.1,1.2);
+    \ifx\insertframesubtitle\@empty%
+        {\node[anchor=south west, white, font=\large] at (3.2,0.61){\insertframetitle};}
+        \else%
+        {\node[anchor=west, white, font=\large] at (3.2,0.81){\insertframetitle};%
+        \node[anchor=west, white, font=\small] at (3.2,0.41){
+            \usebeamerfont{framesubtitle}%
+            \insertframesubtitle
+        };}%
+        \fi
+    \end{tikzpicture}
+    \end{beamercolorbox}
+}
+
+% Changing margins
+\newenvironment{changemargin}[2]{%
+	\begin{list}{}{%
+			\setlength{\topsep}{0pt}%
+			\setlength{\leftmargin}{#1}%
+			\setlength{\rightmargin}{#2}%
+			\setlength{\listparindent}{\parindent}%
+			\setlength{\itemindent}{\parindent}%
+			\setlength{\parsep}{\parskip}%
+		}%
+		\item[]}{\end{list}}
+
+\mode<all>
