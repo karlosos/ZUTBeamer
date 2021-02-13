@@ -6,6 +6,7 @@
 \setbeamertemplate{background}{
     \begin{tikzpicture}
         \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+        % \fill[green,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
         \fill[color=DarkBlue] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
         \ifnum\thepage>1\relax%
              \fill[color=ZUTLightGray] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
@@ -54,25 +55,6 @@
 		  \usebeamerfont{goal}Cel pracy: \@goal%
 		\end{beamercolorbox}
     \end{textblock*}
-    \begin{textblock*}{9cm}(2cm, 5.625cm)
-		\begin{beamercolorbox}{date}
-	      \usebeamerfont{date}\textbf{\@city}, \insertdate%
-	    \end{beamercolorbox}
-    \end{textblock*}
-% 	% Green ZUT logo
-% 	\begin{tikzpicture}[overlay,remember picture]
-% 		\node[xshift=1.4cm,yshift=-20pt]
-%         at (current page.north west) {
-%         \includegraphics[width=2.5cm]{resources/zut_logo.png}
-%         };
-%     \end{tikzpicture}%
-% 	% Blue WIZUT logo
-% 	\begin{tikzpicture}[overlay,remember picture]
-% 		\node[xshift=1.4cm,yshift=20pt]
-%         at (current page.south west) {
-%         \includegraphics[width=2.5cm]{resources/wi_logo.png}
-%         };
-%     \end{tikzpicture}%
 }
 
 % Bullets as squares
@@ -122,4 +104,21 @@
   \end{beamercolorbox}}%
   \vskip1.5pt%
 }
+
+% Frame title indentation
+\newcommand{\frametitledef}{\frametitle{%
+\ifnum\value{subsection}=0
+  \parbox[t]{1em}{\thesection}%
+  \parbox[t]{\dimexpr0.9\paperwidth-1em\relax}{\insertsection}%
+\else
+  \ifnum\value{subsubsection}=0
+    \parbox[t]{2em}{\thesection.\thesubsection}%
+    \parbox[t]{\dimexpr0.9\paperwidth-2em\relax}{\insertsubsection}%
+  \else
+    \parbox[t]{3em}{\thesection.\thesubsection.\thesubsubsection}%
+    \parbox[t]{\dimexpr0.9\paperwidth-3em\relax}{\insertsubsubsection}%
+  \fi
+\fi
+}}
+
 \mode<all>
