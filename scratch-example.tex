@@ -32,14 +32,13 @@
 \titlepage
 \end{frame}
 
-\section{Basic Section}
-\subsection{Blind Text}
+\section{Blind Text}
 \begin{frame}{Jabberwocky}
     \framesubtitle{Lewis Carroll}%
     \begin{tikzpicture}[overlay,remember picture]
-    \node[anchor=south east,xshift=-30pt,yshift=40pt]
+    \node[anchor=south east,xshift=-10pt,yshift=55pt]
         at (current page.south east) {
-        \includegraphics[width=35mm]{resources/jabberwocky-light}
+        \includegraphics[width=30mm]{resources/jabberwocky-light}
         };
     \end{tikzpicture}%
     'Twas brillig, and the slithy toves\\
@@ -48,14 +47,14 @@
     And the mome raths outgrabe.\\\bigskip
 
     “Beware the Jabberwock, my son!\\
-    The jaws that bite, the claws that catch!\\
+    The jaws that bite, the claws that\\
     Beware the Jubjub bird, and shun\\
     The frumious Bandersnatch!”\\
 \end{frame}
 
 \begin{frame}[label=lists]{Lists and locales}
     \framesubtitle{Lorem ipsum dolor sit amet}
-    \begin{columns}[onlytextwidth]
+    \begin{columns}[onlytextwidth, T]
     \column{.5\textwidth}
         \begin{itemize}
         \item Nulla nec lacinia odio. Curabitur urna tellus.
@@ -72,14 +71,6 @@
         \begin{enumerate}
         \item Donec porta, risus porttitor egestas scelerisque video.
         \item Donec porta, risus porttitor egestas scelerisque video.
-        \begin{enumerate}
-            \item Nunc non ante fringilla, manus potentis cario.
-            \begin{enumerate}
-            \item Pellentesque servus morbi tristique.
-            \item Pellentesque servus morbi tristique.
-            \end{enumerate}
-        \end{enumerate}
-        \item Donec porta, risus porttitor egestas scelerisque video.
         \end{enumerate}
     \end{columns}
     \bigskip
@@ -88,10 +79,10 @@
     {\uselanguage{polish}Tutaj jakiś fajny tekst po polsku, żeby nie było, że
     nie da się pisać po polsku z polskimi znakami.}
     {\uselanguage{english}The quick, brown fox jumps over a lazy
-    dog. DJs flock by when MTV ax quiz prog. “Now fax quiz Jack!”}
+    dog.}
 \end{frame}
 
-\subsection{Structuring Elements}
+\section{Structuring Elements}
 \begin{frame}[label=simmonshall]{Text blocks}
     \framesubtitle{In plain, example, and \alert{alert} flavour}
     \alert{This text} is highlighted.
@@ -120,14 +111,14 @@
     \end{proof}
 \end{frame}
 
-\subsection{Numerals and Mathematics}
+\section{Numerals and Mathematics}
 \begin{frame}[label=math]{Numerals and Mathematics}
     \framesubtitle{Formulae, equations, and expressions}
     \begin{columns}[onlytextwidth]
     \column{.20\textwidth}
-        1234567890
+        1234567
     \column{.20\textwidth}
-        \oldstylenums{1234567890}
+        \oldstylenums{1234567}
     \column{.20\textwidth}
         $\hat{x}$, $\check{x}$, $\tilde{a}$,
         $\bar{a}$, $\dot{y}$, $\ddot{y}$
@@ -168,7 +159,7 @@
     \end{columns}
 \end{frame}
 
-\subsection{Figures and Code Listings}
+\section{Figures and Code Listings}
 \begin{frame}[label=figs1]{Figures}
     \framesubtitle{Tables, graphs, and images}
     \begin{table}[!b]
@@ -202,7 +193,7 @@
     \end{table}
 \end{frame}
 \begin{frame}[label=figs2]{Figures}
-    \framesubtitle{Tables, graphs, and images}
+    %\framesubtitle{Tables, graphs, and images}
     \begin{figure}[b]
     \centering
     % Flipping a coin
@@ -304,10 +295,10 @@ int main(int argc, char **argv)
 \begin{frame}{RealBoost algorithm}{With narrow margins}
 	% https://tex.stackexchange.com/a/200172/228402
 	  \begin{columns}
-		\column{\dimexpr\paperwidth-10pt}
+		\column{\dimexpr\paperwidth-90pt}
 		\begin{algorithm}[H]
+			\footnotesize
 			\caption{Algorytm RealBoost}\label{realboost}
-			\small
 			\begin{algorithmic}[1]
 				\Procedure{RealBoost}{$D$}
 				\State{Rozpocznij od jednostajnego rozkładu wag: $w_i := 1/m, i=1, \ldots, m$.}
@@ -326,7 +317,7 @@ int main(int argc, char **argv)
 	\end{columns}
 \end{frame}
 
-\subsection{Citations and Bibliography}
+\section{Citations and Bibliography}
 \begin{frame}[label=citations]{Citations}
     \framesubtitle{\TeX, \LaTeX, and Beamer}
 
@@ -374,5 +365,25 @@ int main(int argc, char **argv)
         \emph{Beamer by example} In TUGboat,
             Vol. 26, No. 1., pp. 68-73.
     \end{thebibliography}
+\end{frame}
+
+\section{Sec 2}
+\begin{frame}[label=bibliography]{Sec 2}
+  Test
+\end{frame}
+
+\section{Sec 3}
+\begin{frame}[label=bibliography]{Sec 2}
+  Test
+\end{frame}
+
+\section{Sec 4}
+\begin{frame}[label=bibliography]{Sec 2}
+  Test
+\end{frame}
+
+\section{Sec 5}
+\begin{frame}[label=bibliography]{Sec 2}
+  Test
 \end{frame}
 \end{document}

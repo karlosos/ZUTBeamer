@@ -1,5 +1,4 @@
 \mode<presentation>
-
 % Global variables
 \def\city#1{\gdef\@city{#1}}
 \def\supervisor#1{\gdef\@supervisor{#1}}
@@ -11,6 +10,13 @@
 \setbeamerfont{date}{size=\footnotesize}
 \setbeamerfont{supervisor}{size=\footnotesize}
 \setbeamerfont{goal}{size=\footnotesize}
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamerfont{caption name}{size=\footnotesize}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{section in sidebar}{size=\small, series=\bfseries}
+\setbeamerfont{subsection in sidebar}{size=\small, series=\bfseries}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{series=\mdseries}
 
 
 % Define color scheme
@@ -21,10 +27,16 @@
 \definecolor{ScratchLightOrange}{RGB}{216,178,92}
 \definecolor{ScratchUltraLightOrange}{RGB}{245,236,215}
 \definecolor{ScratchRed}{RGB}{153, 13, 6}
-\definecolor{ScratchGray}{RGB}{50, 50, 50}
+\definecolor{ScratchGray}{RGB}{220, 220, 220}
 
 \definecolor{DarkBlue}{RGB}{28, 47, 150}
-\definecolor{Grey}{RGB}{153, 153, 153}
+\definecolor{ZUTLigthBlue}{RGB}{61, 133, 198}
+\definecolor{ZUTDarkGray}{RGB}{153, 153, 153}
+\definecolor{ZUTLightGray}{RGB}{217, 217, 217}
+\definecolor{ZUTSideBlue}{RGB}{120, 144, 205}
+\definecolor{ZUT@black}{HTML}{2B2E34}
+\definecolor{ZUT@white}{HTML}{F3EEE1}
+\colorlet{ZUT@darkGray}{white!10!ZUT@black}
 
 % Syntax highlighting colors
 \definecolor{CodeRed}{RGB}{215, 58, 71}
@@ -36,21 +48,35 @@
 \setbeamercolor*{title}{fg=ScratchLightBrown}
 \setbeamercolor*{author}{fg=white}
 \setbeamercolor*{date}{fg=white}
-\setbeamercolor*{item}{fg=ScratchOrange}
-\setbeamercolor*{frametitle}{fg=ScratchBrown}
+\setbeamercolor*{item}{fg=ZUTLigthBlue}
+\setbeamercolor*{frametitle}{fg=ZUTLigthBlue}
+\setbeamercolor*{framesubtitle}{fg=ZUTLigthBlue}
 \setbeamercolor*{block title}{fg=white, bg=ScratchOrange}
 \setbeamercolor*{block title example}{fg=white, bg=ScratchLightOrange}
 \setbeamercolor*{block title alerted}{fg=white, bg=ScratchRed}
-\setbeamercolor*{block body}{bg=ScratchUltraLightOrange}
-\setbeamercolor*{block body example}{bg=ScratchUltraLightOrange}
-\setbeamercolor*{block body alerted}{bg=ScratchUltraLightOrange}
-\setbeamercolor*{section in toc}{fg=black}
-\setbeamercolor*{section page}{fg=white}
-\setbeamercolor*{caption}{fg=ScratchGray}
-\setbeamercolor*{caption name}{fg=ScratchOrange}
-\setbeamercolor*{qed symbol}{fg=ScratchOrange}
+\setbeamercolor*{block body}{bg=ScratchUltraLightOrange, fg=black}
+\setbeamercolor*{block body example}{bg=ScratchUltraLightOrange, fg=black}
+\setbeamercolor*{block body alerted}{bg=ScratchUltraLightOrange, fg=black}
+\setbeamercolor*{section in toc}{fg=ZUTLigthBlue}
+\setbeamercolor*{section page}{fg=ZUTLigthBlue}
+\setbeamercolor*{caption}{fg=ZUT@darkGray}
+\setbeamercolor*{caption name}{fg=ZUTLigthBlue}
+\setbeamercolor*{qed symbol}{fg=ZUTLigthBlue}
 \setbeamercolor*{alerted text}{fg=ScratchRed}
 \setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{normal text}{fg=black}
+\setbeamercolor*{footline}{fg=black}
+
+
+% Sidebar
+\setbeamercolor{section in sidebar}{fg=ZUTSideBlue}          %color of the active section
+\setbeamercolor{section in sidebar shaded}{fg=ZUTDarkGray}     %color of the inactive section
+\setbeamercolor{subsection in sidebar}{fg=ZUTSideBlue}         %color of the active subsection
+\setbeamercolor{subsection in sidebar shaded}{fg=ZUTDarkGray}  %color of the inactive subsection
+\setbeamercolor{title in sidebar}{fg=ZUTDarkGray}              %color of the presentation title
+\setbeamercolor{author in sidebar}{fg=ZUTDarkGray}             %color of the author
+
+
 
 % Syntax highlight colors
 \lstset{%
@@ -63,11 +89,12 @@
 % Links colors
 \hypersetup{
   colorlinks = true,
-  linkcolor = ScratchOrange
+  linkcolor = ZUTLigthBlue,
+  urlcolor = ZUTLigthBlue,
 }
 
 % Color brackets in references
 \let\oldcite=\cite                                                              
-\renewcommand{\cite}[1]{\textcolor{ScratchOrange}{\oldcite{#1}}}
+\renewcommand{\cite}[1]{\textcolor{ZUTLigthBlue}{\oldcite{#1}}}
 
 \mode <all>

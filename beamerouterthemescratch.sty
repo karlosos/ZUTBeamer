@@ -3,20 +3,23 @@
 % Subtitle cursive
 \setbeamerfont{framesubtitle}{size=\small, shape=\itshape}
 
+
 % Frame title
 \defbeamertemplate*{frametitle}{texsx}[1][]
 {
 \vskip0.5cm%
-    \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle} 
+    \begin{beamercolorbox}[wd=0.5\paperwidth,ht=0.9cm]{frametitle} 
     \begin{tikzpicture}
-    \useasboundingbox[fill=white](0,0.0) rectangle(\the\paperwidth,1.2);
-    \fill[ScratchOrange] (0.1,0.0) rectangle(2.95,1.2);
-    \fill[ScratchLightBlue] (3.05,0) rectangle(\the\paperwidth-3.1,1.2);
+    % \useasboundingbox[fill=white](0,0.0) rectangle(\the\paperwidth,1.2);
+    % \fill[ScratchOrange] (0.1,0.0) rectangle(2.95,1.2);
+    % \fill[ScratchLightBlue] (3.05,0) rectangle(\the\paperwidth-3.1,1.2);
     \ifx\insertframesubtitle\@empty%
-        {\node[anchor=south west, white, font=\large] at (3.2,0.61){\insertframetitle};}
+        {\node[anchor=south west, font=\large] at (20,0.26){
+        \usebeamerfont{frametitle}
+        \insertframetitle};}
         \else%
-        {\node[anchor=west, white, font=\large] at (3.2,0.81){\insertframetitle};%
-        \node[anchor=west, white, font=\small] at (3.2,0.41){
+        {\node[anchor=west, font=\large] at (1,0.81){\insertframetitle};%
+        \node[anchor=west, font=\small] at (1,0.41){
             \usebeamerfont{framesubtitle}%
             \insertframesubtitle
         };}%
@@ -28,7 +31,7 @@
 % Changing margins
 \newenvironment{changemargin}[2]{%
 	\begin{list}{}{%
-			\setlength{\topsep}{0pt}%
+			\setlength{\topsep}{-0pt}%
 			\setlength{\leftmargin}{#1}%
 			\setlength{\rightmargin}{#2}%
 			\setlength{\listparindent}{\parindent}%
@@ -36,5 +39,14 @@
 			\setlength{\parsep}{\parskip}%
 		}%
 		\item[]}{\end{list}}
+
+% Sidebar
+% https://github.com/zbowang/BeamerTheme
+\useoutertheme[width=2.8cm]{sidebar}
+% % delete title and author
+% % \makeatletter
+\setbeamertemplate{sidebar left}{\insertverticalnavigation{\beamer@sidebarwidth}}
+% fontsize
+\setbeamersize{sidebar width left=2.8cm}
 
 \mode<all>
