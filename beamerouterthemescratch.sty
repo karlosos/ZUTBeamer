@@ -1,32 +1,59 @@
 \mode<presentation>
 
-% Subtitle cursive
-\setbeamerfont{framesubtitle}{size=\small, shape=\itshape}
+% Sidebar
+% https://github.com/zbowang/BeamerTheme
+\useoutertheme[width=2.8cm]{sidebar}
+% % delete title and author
+% % \makeatletter
+\setbeamertemplate{sidebar left}{\insertverticalnavigation{\beamer@sidebarwidth}}
+% fontsize
+\setbeamersize{sidebar width left=2.8cm}
 
 
-% Frame title
-\defbeamertemplate*{frametitle}{texsx}[1][]
-{
-\vskip0.5cm%
-    \begin{beamercolorbox}[wd=0.5\paperwidth,ht=0.9cm]{frametitle} 
-    \begin{tikzpicture}
-    % \useasboundingbox[fill=white](0,0.0) rectangle(\the\paperwidth,1.2);
-    % \fill[ScratchOrange] (0.1,0.0) rectangle(2.95,1.2);
-    % \fill[ScratchLightBlue] (3.05,0) rectangle(\the\paperwidth-3.1,1.2);
-    \ifx\insertframesubtitle\@empty%
-        {\node[anchor=south west, font=\large] at (20,0.26){
-        \usebeamerfont{frametitle}
-        \insertframetitle};}
-        \else%
-        {\node[anchor=west, font=\large] at (1,0.81){\insertframetitle};%
-        \node[anchor=west, font=\small] at (1,0.41){
-            \usebeamerfont{framesubtitle}%
-            \insertframesubtitle
-        };}%
-        \fi
-    \end{tikzpicture}
-    \end{beamercolorbox}
-}
+% % Frame title
+% \defbeamertemplate*{frametitle}{texsx}[1][]
+% {
+% \vskip0.1cm%
+%     \begin{beamercolorbox}[wd=0.9\paperwidth,ht=0.2cm]{frametitle} 
+%     \begin{tikzpicture}
+%     \ifx\insertframesubtitle\@empty%
+%         {\node[anchor=south west, font=\large] at (0,0){
+%         \insertframetitle
+%         };}
+%         \else%
+%         {\node[anchor=west, font=\large] at (0,0){
+%             \usebeamerfont{frametitle}{
+%             \usebeamercolor{frametitle}{
+%             \insertframetitle}}
+%             \vskip0.1cm%
+%             \usebeamerfont{framesubtitle}{
+%             \usebeamercolor{framesubtitle}{
+%             \insertframesubtitle}}
+%         };%
+%         \node[anchor=west, font=\small] at (0,0){
+
+%         };}%
+%         \fi
+%     \end{tikzpicture}
+%     \end{beamercolorbox}
+% }
+
+% \setbeamertemplate{frametitle}
+% {\vskip-20pt
+%   \leavevmode
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=-2ex,dp=1ex]{frametitle}%
+%     \usebeamercolor{frametitle}{
+%     \usebeamerfont{frametitle}{
+%             \insertframetitle}}
+%     \vskip0.1cm%
+%     \hspace{0.1em}
+%     \usebeamerfont{framesubtitle}{
+%     \usebeamercolor{framesubtitle}{
+%     \insertframesubtitle}}
+%   \end{beamercolorbox}
+%   }%
+% }
 
 % Changing margins
 \newenvironment{changemargin}[2]{%
@@ -39,14 +66,5 @@
 			\setlength{\parsep}{\parskip}%
 		}%
 		\item[]}{\end{list}}
-
-% Sidebar
-% https://github.com/zbowang/BeamerTheme
-\useoutertheme[width=2.8cm]{sidebar}
-% % delete title and author
-% % \makeatletter
-\setbeamertemplate{sidebar left}{\insertverticalnavigation{\beamer@sidebarwidth}}
-% fontsize
-\setbeamersize{sidebar width left=2.8cm}
 
 \mode<all>

@@ -17,6 +17,8 @@
 \setbeamerfont{subsection in sidebar}{size=\small, series=\bfseries}
 \setbeamerfont{frametitle}{series=\bfseries}
 \setbeamerfont{framesubtitle}{series=\mdseries}
+% Subtitle cursive
+\setbeamerfont{framesubtitle}{size=\small, shape=\itshape}
 
 
 % Define color scheme
@@ -44,6 +46,7 @@
 \definecolor{CodeOrange}{RGB}{227, 98, 9}
 
 % Set color theme
+\setbeamercolor*{normal text}{fg=black}
 \setbeamercolor*{title page header}{fg=white}
 \setbeamercolor*{title}{fg=ScratchLightBrown}
 \setbeamercolor*{author}{fg=white}
@@ -64,7 +67,6 @@
 \setbeamercolor*{qed symbol}{fg=ZUTLigthBlue}
 \setbeamercolor*{alerted text}{fg=ScratchRed}
 \setbeamercolor*{bibliography entry author}{fg=black}
-\setbeamercolor*{normal text}{fg=black}
 \setbeamercolor*{footline}{fg=black}
 
 
@@ -76,13 +78,15 @@
 \setbeamercolor{title in sidebar}{fg=ZUTDarkGray}              %color of the presentation title
 \setbeamercolor{author in sidebar}{fg=ZUTDarkGray}             %color of the author
 
+\setbeamercolor{frametitle}{fg=Brown,bg=Brown!20}
+\setbeamercolor{section in head/foot}{bg=Brown}
 
 
 % Syntax highlight colors
 \lstset{%
     basicstyle=\ttfamily,
     commentstyle=\color{CodeGreen},
-    keywordstyle=\color{CodeRed},
+    keywordstyle=\color{ZUTLigthBlue},
     stringstyle=\color{CodeOrange}
 }
 
@@ -92,6 +96,7 @@
   linkcolor = ZUTLigthBlue,
   urlcolor = ZUTLigthBlue,
 }
+\hypersetup{bookmarksdepth=4,bookmarksnumbered=true,bookmarksopen=true}
 
 % Color brackets in references
 \let\oldcite=\cite                                                              

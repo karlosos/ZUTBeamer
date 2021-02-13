@@ -27,8 +27,8 @@
 %\usepackage[texcoord, grid,gridcolor=red!10,subgridcolor=green!10,gridunit=cm]{eso-pic}
 
 \begin{document}
-
 \begin{frame}
+\addtocounter{framenumber}{1}
 \titlepage
 \end{frame}
 
@@ -293,6 +293,8 @@ int main(int argc, char **argv)
 \end{frame}
 
 \begin{frame}{RealBoost algorithm}{With narrow margins}
+    \vspace{-15pt}
+    % TODO- przesunela sie data w stopce
 	% https://tex.stackexchange.com/a/200172/228402
 	  \begin{columns}
 		\column{\dimexpr\paperwidth-90pt}
@@ -367,23 +369,4 @@ int main(int argc, char **argv)
     \end{thebibliography}
 \end{frame}
 
-\section{Sec 2}
-\begin{frame}[label=bibliography]{Sec 2}
-  Test
-\end{frame}
-
-\section{Sec 3}
-\begin{frame}[label=bibliography]{Sec 2}
-  Test
-\end{frame}
-
-\section{Sec 4}
-\begin{frame}[label=bibliography]{Sec 2}
-  Test
-\end{frame}
-
-\section{Sec 5}
-\begin{frame}[label=bibliography]{Sec 2}
-  Test
-\end{frame}
 \end{document}
