@@ -77,33 +77,27 @@
 
 \setbeamertemplate{bibliography item}[text]
 
-% Footer
-\defbeamertemplate*{footline}{fibeamer}{%
-    \ifnum\c@framenumber=0\else%
-      \begin{tikzpicture}[overlay]
-        \node[anchor=south east,
-          yshift=0.1cm,
-          xshift=-0.1cm] at
-          (current page.south east) {
-            \usebeamercolor[fg]{framenumber}%
-            \usebeamerfont{framenumber}%
-            \insertframenumber/\inserttotalframenumber};
-      \end{tikzpicture}
-    \fi}
-
 %
 % Footline
 %
-\setbeamertemplate{footline}
-{
+\defbeamertemplate*{footline}{infolines theme}
+{%
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=5ex,dp=1ex, right]{footline}%
-    \usebeamerfont{date}\textbf{\@city}, \insertshortdate{}\hspace*{16em}
-    \insertpagenumber {} / \insertdocumentendpage\hspace*{2ex} 
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.25ex,dp=1ex,center]{sidebar footer}%
+    \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.39\paperwidth,ht=2.25ex,dp=1ex,left]{left footer}%
+    \usebeamerfont{date}
+    \textbf{\@city}, \insertshortdate{}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.39\paperwidth,ht=2.25ex,dp=1ex,right]{right footer}%
+  \usebeamerfont{date}
+   \insertpagenumber {} / \insertdocumentendpage
+   \hspace*{1.5ex} 
   \end{beamercolorbox}}%
   \vskip1.5pt%
 }
+
 
 % Frame title indentation
 \newcommand{\frametitledef}{\frametitle{%
