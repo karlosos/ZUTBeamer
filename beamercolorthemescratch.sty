@@ -22,27 +22,19 @@
 
 
 % Define color scheme
-\definecolor{ScratchBrown}{RGB}{119,95,85}
-\definecolor{ScratchLightBrown}{RGB}{235,221,195}
-\definecolor{ScratchLightBlue}{RGB}{148,182,210}
-\definecolor{ScratchOrange}{RGB}{221,128,71}
-\definecolor{ScratchLightOrange}{RGB}{216,178,92}
-\definecolor{ScratchUltraLightOrange}{RGB}{245,236,215}
-\definecolor{ScratchRed}{RGB}{153, 13, 6}
-\definecolor{ScratchGray}{RGB}{220, 220, 220}
-
-\definecolor{DarkBlue}{RGB}{28, 47, 150}
+\definecolor{ZUT@LightOrange}{RGB}{216,178,92}
+\definecolor{ZUT@Red}{RGB}{153, 13, 6}
+\definecolor{ZUT@DarkBlue}{RGB}{28, 47, 150}
+\definecolor{ZUT@LigthBlue}{RGB}{61, 133, 198}
 \definecolor{ZUTLigthBlue}{RGB}{61, 133, 198}
-\definecolor{ZUTDarkGray}{RGB}{153, 153, 153}
-\definecolor{ZUTLightGray}{RGB}{217, 217, 217}
-\definecolor{ZUTSideBlue}{RGB}{120, 144, 205}
+\definecolor{ZUT@DarkGray}{RGB}{153, 153, 153}
+\definecolor{ZUT@LightGray}{RGB}{217, 217, 217}
+\definecolor{ZUT@SideBlue}{RGB}{120, 144, 205}
 \definecolor{ZUT@black}{HTML}{2B2E34}
 \definecolor{ZUT@white}{HTML}{F3EEE1}
 \colorlet{ZUT@darkGray}{white!10!ZUT@black}
 \definecolor{ZUT@pink}{RGB}{235, 0, 139}
-
-\colorlet{ZUT@ultraLightBlue}{white!90!ZUTLigthBlue}
-%\definecolor{ZUT@ultraLightBlue}{RGB}{149, 179, 255}
+\colorlet{ZUT@ultraLightBlue}{white!90!ZUT@LigthBlue}
 
 % Syntax highlighting colors
 \definecolor{CodeRed}{RGB}{215, 58, 71}
@@ -59,8 +51,8 @@
 \setbeamercolor*{frametitle}{fg=ZUTLigthBlue}
 \setbeamercolor*{framesubtitle}{fg=ZUTLigthBlue}
 \setbeamercolor*{block title}{fg=white, bg=ZUTLigthBlue}
-\setbeamercolor*{block title example}{fg=white, bg=ScratchLightOrange}
-\setbeamercolor*{block title alerted}{fg=white, bg=ScratchRed}
+\setbeamercolor*{block title example}{fg=white, bg=ZUT@LightOrange}
+\setbeamercolor*{block title alerted}{fg=white, bg=ZUT@Red}
 \setbeamercolor*{block body}{bg=ZUT@ultraLightBlue, fg=black}
 \setbeamercolor*{block body example}{bg=ZUT@ultraLightBlue, fg=black}
 \setbeamercolor*{block body alerted}{bg=ZUT@ultraLightBlue, fg=black}
@@ -76,12 +68,12 @@
 
 
 % Sidebar
-\setbeamercolor{section in sidebar}{fg=ZUTSideBlue}          %color of the active section
-\setbeamercolor{section in sidebar shaded}{fg=ZUTDarkGray}     %color of the inactive section
-\setbeamercolor{subsection in sidebar}{fg=ZUTSideBlue}         %color of the active subsection
-\setbeamercolor{subsection in sidebar shaded}{fg=ZUTDarkGray}  %color of the inactive subsection
-\setbeamercolor{title in sidebar}{fg=ZUTDarkGray}              %color of the presentation title
-\setbeamercolor{author in sidebar}{fg=ZUTDarkGray}             %color of the author
+\setbeamercolor{section in sidebar}{fg=ZUT@SideBlue}          %color of the active section
+\setbeamercolor{section in sidebar shaded}{fg=ZUT@DarkGray}     %color of the inactive section
+\setbeamercolor{subsection in sidebar}{fg=ZUT@SideBlue}         %color of the active subsection
+\setbeamercolor{subsection in sidebar shaded}{fg=ZUT@DarkGray}  %color of the inactive subsection
+\setbeamercolor{title in sidebar}{fg=ZUT@DarkGray}              %color of the presentation title
+\setbeamercolor{author in sidebar}{fg=ZUT@DarkGray}             %color of the author
 
 \setbeamercolor{frametitle}{fg=Brown,bg=Brown!20}
 \setbeamercolor{section in head/foot}{bg=Brown}
@@ -91,20 +83,20 @@
 \lstset{%
     basicstyle=\ttfamily,
     commentstyle=\color{CodeGreen},
-    keywordstyle=\color{ZUTLigthBlue},
+    keywordstyle=\color{ZUT@LigthBlue},
     stringstyle=\color{CodeOrange}
 }
 
 % Links colors
 \hypersetup{
   colorlinks = true,
-  linkcolor = ZUTLigthBlue,
-  urlcolor = ZUTLigthBlue,
+  linkcolor = ZUT@LigthBlue,
+  urlcolor = ZUT@LigthBlue,
 }
 \hypersetup{bookmarksdepth=4,bookmarksnumbered=true,bookmarksopen=true}
 
 % Color brackets in references
 \let\oldcite=\cite                                                              
-\renewcommand{\cite}[1]{\textcolor{ZUTLigthBlue}{\oldcite{#1}}}
+\renewcommand{\cite}[1]{\textcolor{ZUT@LigthBlue}{\oldcite{#1}}}
 
 \mode <all>

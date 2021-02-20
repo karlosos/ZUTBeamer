@@ -7,12 +7,12 @@
     \begin{tikzpicture}
         \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
         % \fill[green,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-        \fill[color=DarkBlue] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
+        \fill[color=ZUT@DarkBlue] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
         \ifnum\thepage>1\relax%
-             \fill[color=ZUTLightGray] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
+             \fill[color=ZUT@LightGray] (2.8,0) rectangle (\the\paperwidth,\the\paperheight);
         \fi
         %\fill[color=ScratchOrange] (0.1,0.1) rectangle(2.95,1.9);
-        \fill[color=ZUTDarkGray] (2.8,0) rectangle(\the\paperwidth,0.5);
+        \fill[color=ZUT@DarkGray] (2.8,0) rectangle(\the\paperwidth,0.5);
 
     \end{tikzpicture}
     % Green ZUT logo
@@ -67,9 +67,9 @@
 % \setbeamertemplate{itemize subitem}{\tikz{\draw[color=ScratchOrange, ultra thick] rectangle(.2,.2);}}
 % \setbeamertemplate{itemize subsubitem}{\tikz{\draw[color=ScratchLightOrange] rectangle(.2,.2);}}
 
-\defbeamertemplate*{itemize item}{ZUTLigthBlue}{$\bullet$}
-\defbeamertemplate*{itemize subitem}{ZUTLigthBlue}{\---}
-\defbeamertemplate*{itemize subsubitem}{ZUTLigthBlue}{\guillemotright}
+\defbeamertemplate*{itemize item}{ZUT@LigthBlue}{$\bullet$}
+\defbeamertemplate*{itemize subitem}{ZUT@LigthBlue}{\---}
+\defbeamertemplate*{itemize subsubitem}{ZUT@LigthBlue}{\guillemotright}
 
 \setbeamertemplate{enumerate items}[default]
 
