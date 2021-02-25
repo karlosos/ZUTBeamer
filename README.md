@@ -9,10 +9,10 @@
 <h4 align="center">ZUT Beamer template</h4>
 
 <p align="center">
-  <a href="#what-is-this-and-who-is-this-for">What is this and who is this for</a> •
-  <a href="#development">Development</a> •
-  <a href="#live-demo">Live demo</a> •
-  <a href="#known-bugs">Known bugs</a> •
+  <a href="#what-is-this-and-who-is-this-for-">What is this and who is this for</a> •
+  <a href="#development-">Development</a> •
+  <a href="#live-demo-">Live demo</a> •
+  <a href="#known-bugs-">Known bugs</a> •
   <a href="#my-other-templates">My other templates</a>
 </p>
 
