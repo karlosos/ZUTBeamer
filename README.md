@@ -23,7 +23,7 @@ This project was made for my dissertaion presentation. I also wanted to improve 
 
 ## Development 🚀
 
-Compile `scratch-example.tex` with `pdflatex scratch-example.tex`.
+Compile `presentation.tex` with `pdflatex presentation.tex`. Or upload the [zipped project](https://github.com/karlosos/ZUTBeamer/archive/main.zip) to Overleaf.
 
 ## Live demo ✨
 
