@@ -31,7 +31,7 @@ You can see [example pdf output here](https://github.com/karlosos/ZUTBeamer/rele
 
 ## Known bugs 🐛
 
-If you fund something please add a ticket [here](https://github.com/karlosos/ZUTBeamer/issues).
+If you found something please add a ticket [here](https://github.com/karlosos/ZUTBeamer/issues).
 
 ## My other templates
 
