@@ -16,6 +16,14 @@
   <a href="#my-other-templates">My other templates</a>
 </p>
 
+<div align="center">
+
+[![Overleaf](https://img.shields.io/badge/Overleaf-open%20template-green)](https://www.overleaf.com/latex/templates/zutbeamer/wfztwrddyvdb)
+  <img alt="issues" src="https://img.shields.io/github/issues-raw/karlosos/ZUTBeamer?color=yellow">
+  <img alt="last commit" src="https://img.shields.io/github/last-commit/karlosos/ZUTBeamer?color=%2357d3af">
+  <a href='https://github.com/karlosos/ZUTBeamer/stargazers'><img alt="Repo stars" src="https://img.shields.io/github/stars/karlosos/ZUTBeamer?logoColor=%2334495e&style=social"></a>
+</div>
+
 
 ## What is this and who is it for 🤷‍♀️
 
@@ -27,7 +35,7 @@ Compile `presentation.tex` with `pdflatex presentation.tex`. Or upload the [zipp
 
 ## Live demo ✨
 
-You can see [example pdf output here](https://github.com/karlosos/ZUTBeamer/releases/download/1.0/ZUTBeamer-example.pdf).
+You can see [example pdf output here](https://github.com/karlosos/ZUTBeamer/releases/download/1.0/ZUTBeamer-example.pdf). As an alternative you can use Overleaf. This theme is available as a [Overleaf template here](https://www.overleaf.com/latex/templates/zutbeamer/wfztwrddyvdb).
 
 ## Known bugs 🐛
 
