@@ -41,6 +41,12 @@ You can see [example pdf output here](https://github.com/karlosos/ZUTBeamer/rele
 
 If you found something please add a ticket [here](https://github.com/karlosos/ZUTBeamer/issues).
 
+<details>
+  <summary>Changing language and logos</summary>
+  
+  You can change `\supervisor` and `\goal` prefixes in the file [zutbeamer/beamerinnerthemezutbeamer.sty](https://github.com/karlosos/ZUTBeamer/blob/main/zutbeamer/beamerinnerthemezutbeamer.sty#L51) as described in this issue: https://github.com/karlosos/ZUTBeamer/issues/5
+</details>
+
 ## My other templates
 
 
